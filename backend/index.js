@@ -3,6 +3,7 @@ const express = require("express");
 
 // importing routers
 const userRouter = require('./routers/userRouter');
+const DietModelRouter = require('./routers/DietModelRouter');
 const utilRouter = require('./routers/util');
 
 const cors = require('cors');
@@ -21,6 +22,7 @@ app.use(cors({
 
 app.use('/user', userRouter);
 app.use('/util', utilRouter);
+app.use('/diet', DietModelRouter);
 
 app.use(express.static('./uploads'));
 
