@@ -9,6 +9,7 @@ import { AnimatePresence } from "framer-motion";
 import { UserProvider } from "./UserContext";
 import UserAuth from "./components/UserAuth";
 import Signup from "./components/SignUp";
+import ManageDiet from "./components/ManageDiet";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route element={<Home />} path="home" />
               <Route element={<Signup />} path="signup" />
               <Route element={<Login />} path="Login" />
+              <Route element={<ManageDiet />} path="manage" />
              
             </Routes>
           </AnimatePresence>

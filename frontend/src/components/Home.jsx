@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import { FiArrowRight } from "react-icons/fi";
+
 
 const Home = () => {
 
