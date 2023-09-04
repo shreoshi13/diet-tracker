@@ -1,15 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import AddDiet from './AddDiet'
 
 const ManageDiet = () => {
   
- 
-
-
-
-    const [userList, setUserList] = useState([]);
+const [foodItems, foodItemsList] = useState([]);
 
     const fetchUserData = async () => {
         const res = await fetch( 'http://localhost:5000/user/getall' );
@@ -17,7 +13,7 @@ const ManageDiet = () => {
 
         const data = await res.json();
         console.log(data);
-        setUserList(data);
+        foodItemsList(data);
     };
 
     const deleteUser = async (id) => {
@@ -66,11 +62,12 @@ const ManageDiet = () => {
 
   return (
     <div>
+       <AddDiet/>
       <div className="container">
           {displayUserData()}
       </div>   
     
-    <AddDiet/>
+   
     </div>
   )
 }
