@@ -75,7 +75,14 @@ const Signup = () => {
 
   return (
     <motion.div
-      className="bg d-flex justify-content-center align-items-center"
+    style = {{backgroundImage:`url("/newsignup.avif")`,
+    backgroundSize:'cover',
+    paddingTop: '50px',
+    minHeight:'90vh'
+  }
+}
+     
+    className="bg d-flex justify-content-center align-items-center"
       initial={{ opacity: 0, x: "100%" }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: "-100%" }}
