@@ -62,7 +62,7 @@ const Login = () => {
         })
       }
 
-      // write code to submit form to server
+    
     },
 
     validationSchema: LoginSchema
