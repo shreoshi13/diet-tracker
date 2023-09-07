@@ -4,70 +4,70 @@ import { Link } from 'react-router-dom';
 import AddDiet from './AddDiet'
 
 const ManageDiet = () => {
-  
-const [foodItems, foodItemsList] = useState([]);
 
-    const fetchUserData = async () => {
-        const res = await fetch( 'http://localhost:5000/user/getall' );
-        console.log(res.status);
+  const [foodItems, foodItemsList] = useState([]);
 
-        const data = await res.json();
-        console.log(data);
-        foodItemsList(data);
-    };
+  const fetchUserData = async () => {
+    const res = await fetch('http://localhost:5000/user/getall');
+    console.log(res.status);
 
-    const deleteUser = async (id) => {
-      const res = await fetch('http://localhost:5000/user/delete/'+id, { method : 'DELETE' });
-      console.log(res.status);
-      const data = await res.json();
-      if(res.status === 200){
-        fetchUserData();
-        toast.success(data.name +' Deleted Successfully ❗')
-      }
-    }
+    const data = await res.json();
+    console.log(data);
+    foodItemsList(data);
+  };
 
-    useEffect(() => {
+  const deleteUser = async (id) => {
+    const res = await fetch('http://localhost:5000/user/delete/' + id, { method: 'DELETE' });
+    console.log(res.status);
+    const data = await res.json();
+    if (res.status === 200) {
       fetchUserData();
-    }, []); 
-    const displayUserData = () => {
+      toast.success(data.name + ' Deleted Successfully ❗')
+    }
+  }
+
+  useEffect(() => {
+    fetchUserData();
+  }, []);
+  const displayUserData = () => {
 
     return <table className='table table-dark'>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>title</th>
-                <th>Duration</th>
-                <th colSpan={2}>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {
-                foodItems.map( (user) => ( <tr>
-                  <td>{user._id}</td>
-                  <td>{user.name}</td>
-                  <td>{user.title}</td>
-                  <td>{user.duration}</td>
-                  <td>
-                    <Link to={'/updateuser/'+user._id} className='btn btn-primary'>Edit</Link>
-                  </td>
-                  <td>
-                    <button onClick={ () => { deleteUser(user._id) } } className='btn btn-danger'>Delete</button>
-                  </td>
-                </tr> ) )
-              }
-            </tbody>
-          </table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>title</th>
+          <th>Duration</th>
+          <th colSpan={2}>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          foodItems.map((user) => (<tr>
+            <td>{user._id}</td>
+            <td>{user.name}</td>
+            <td>{user.title}</td>
+            <td>{user.duration}</td>
+            <td>
+              <Link to={'/updateuser/' + user._id} className='btn btn-primary'>Edit</Link>
+            </td>
+            <td>
+              <button onClick={() => { deleteUser(user._id) }} className='btn btn-danger'>Delete</button>
+            </td>
+          </tr>))
+        }
+      </tbody>
+    </table>
   }
 
   return (
     <div>
-       <AddDiet/>
-      <div className="container">
-          {displayUserData()}
-      </div>   
-    
-   
+      <AddDiet />
+      <div className='container'>
+        {displayUserData()}
+
+      </div>
+
     </div>
   )
 }

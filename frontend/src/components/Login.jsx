@@ -88,8 +88,8 @@ const Login = () => {
                       <div className="text-center">
                         <>
                           <img
-                            src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                            style={{ width: 185 }}
+                            src="./logobg.png"
+                            style={{ width: 130 }}
                             alt="logo"
                           />
                           <h4 className="mt-1 mb-5 pb-1">Login Form</h4>
@@ -109,18 +109,49 @@ const Login = () => {
                         <label htmlFor="">Password</label>
                         <span style={{ color: 'red', fontSize: '0.7em', marginLeft: 10 }}>{loginForm.errors.password}</span>
                         <input type="password" className="form-control mb-3" name="password" onChange={loginForm.handleChange} value={loginForm.values.password} />
+                        <div className="text-center pt-1 mb-5 pb-1">
+                          <button
+                            className="btn btn-primary btn-block fa-lg w-100 mt-5 mb-3"
+                            type="button"
+                          >
+                            Submit
+                          </button><br></br>
+                          <a className="text-muted" href="#!">
+                            Forgot password?
+                          </a>
+                        </div>
 
-                        <button className="btn btn-primary w-100 mt-5">Submit</button>
+                        <div className="d-flex align-items-center justify-content-center pb-4">
+                          <p className="mb-0 me-2">Don't have an account?</p>
+                          <button type="button" className="btn btn-outline-danger">
+                            Create new
+                          </button>
+                        </div>
+
                       </form>
                     </div>
                   </div>
+                  <div className="col-lg-6 d-flex align-items-center float-right"
+
+                  >
+                    <div className=" px-3 py-4 p-md-5 mx-md-4 text-right">
+                      <h4 className="mb-4">We want to be your buddy and mentor</h4>
+                      <p className="small mb-0">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat.
+                      </p>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </motion.div>
+    </motion.div >
   );
 };
 
