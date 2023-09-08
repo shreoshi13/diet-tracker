@@ -67,7 +67,7 @@ const Login = () => {
         })
       }
 
-    
+
     },
 
     validationSchema: LoginSchema
@@ -93,7 +93,7 @@ const Login = () => {
                       <div className="text-center">
                         <>
                           <img
-                            src="./logobg.png"
+                            src="./logo.png"
                             style={{ width: 130 }}
                             alt="logo"
                           />
@@ -116,8 +116,8 @@ const Login = () => {
                         <input type="password" className="form-control mb-3" name="password" onChange={loginForm.handleChange} value={loginForm.values.password} />
                         <div className="text-center pt-1 mb-5 pb-1">
                           <button
-                            className="btn btn-primary btn-block fa-lg w-100 mt-5 mb-3"
-                            
+                            className="btn btn-primary fa-lg w-100 mt-4 lg-3 form-bg"
+
                           >
                             Submit
                           </button><br></br>
@@ -142,10 +142,7 @@ const Login = () => {
                     <div className=" px-3 py-4 p-md-5 mx-md-4 text-right">
                       <h4 className="mb-4">We want to be your buddy and mentor</h4>
                       <p className="small mb-0">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
+                        MyFitnessPal is one of the best weight loss apps and fitness apps, helping nearly 1 million members reach their nutrition and fitness goals every year. Members use it as a calories tracker and calorie counter to log their foods, and take advantage of the app’s food database that contains over 14 million foods. It’s not just a free calorie counter app — it’s also the best calorie counter app for people who are looking to take back control of their health and fitness.
                       </p>
                     </div>
                   </div>
