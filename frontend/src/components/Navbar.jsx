@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import useUserContext from "../UserContext";
 
-
 const Navbar = ({}) => {
-  
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(sessionStorage.getItem("user"))
   );
@@ -12,13 +10,14 @@ const Navbar = ({}) => {
   const { loggedIn, logout } = useUserContext();
 
   const showLoginOptions = () => {
-    if (currentUser !== null || loggedIn ) {
+    if (currentUser !== null || loggedIn) {
       return (
         <>
           <li className="nav-item">
-            <button className="btn btn-danger" onClick={logout} >Logout</button>
+            <button className="btn btn-danger" onClick={logout}>
+              Logout
+            </button>
           </li>
-          
         </>
       );
     } else {
@@ -40,28 +39,24 @@ const Navbar = ({}) => {
   };
 
   return (
-
-<nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-  
-       
-      
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <div className="container">
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-          <a className="navbar-brand" href="#">
-      FITNESS buddy
-    </a>
+            <a className="navbar-brand" href="#">
+              FITNESS buddy
+            </a>
             <li className="nav-item">
               <NavLink className="nav-link" to="/home">
                 Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/manage">
+              <NavLink className="nav-link" to="/managediet">
                 Manage Diet
               </NavLink>
             </li>
-          
+
             {showLoginOptions()}
           </ul>
         </div>

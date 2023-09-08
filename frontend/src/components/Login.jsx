@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import * as Yup from 'yup';
 import { motion } from 'framer-motion';
 import useUserContext from "../UserContext";
+import { useNavigate } from "react-router-dom";
 
 const LoginSchema = Yup.object().shape(
   {
@@ -15,6 +16,8 @@ const LoginSchema = Yup.object().shape(
 const Login = () => {
 
   const { setLoggedIn } = useUserContext();
+
+  const navigate = useNavigate();
 
   // Initializing formik
   const loginForm = useFormik({
@@ -47,6 +50,8 @@ const Login = () => {
         sessionStorage.setItem('user', JSON.stringify(data));
         setLoggedIn(true);
         resetForm();
+
+        navigate('/managediet');
 
       } else if (res.status === 401) {
         Swal.fire({
@@ -123,7 +128,7 @@ const Login = () => {
 
                         <div className="d-flex align-items-center justify-content-center pb-4">
                           <p className="mb-0 me-2">Don't have an account?</p>
-                          <button type="button" className="btn btn-outline-danger">
+                          <button type="submit" className="btn btn-outline-danger">
                             Create new
                           </button>
                         </div>
@@ -131,7 +136,7 @@ const Login = () => {
                       </form>
                     </div>
                   </div>
-                  <div className="col-lg-6 d-flex align-items-center float-right"
+                  <div className="col-lg-6 d-flex align-items-center float-right form-bg"
 
                   >
                     <div className=" px-3 py-4 p-md-5 mx-md-4 text-right">

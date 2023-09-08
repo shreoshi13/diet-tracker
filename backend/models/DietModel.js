@@ -1,10 +1,10 @@
-const {Schema, model} = require('../connection');
+const {Schema, model, Types} = require('../connection');
 
 const myschema = new Schema({
     title : String,
     duration : String,
-    foodList : Array,
-    user : String,
+    foodList : [{type : Types.ObjectId, ref: 'food'}],
+    user : {type : Types.ObjectId, ref: 'users'},
     createdAt : Date,
 });
 

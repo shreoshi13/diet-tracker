@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Navigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import Login from './Login';
 
 const UserAuth = ({ children }) => {
 

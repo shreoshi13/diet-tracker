@@ -1,5 +1,5 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-
+import './App.css';
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
@@ -10,6 +10,7 @@ import { UserProvider } from "./UserContext";
 import UserAuth from "./components/UserAuth";
 import Signup from "./components/SignUp";
 import ManageDiet from "./components/ManageDiet";
+import AddFood from "./components/AddFood";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
               <Route element={<Home />} path="home" />
               <Route element={<Signup />} path="signup" />
               <Route element={<Login />} path="Login" />
-              <Route element={<ManageDiet />} path="manage" />
+              <Route element={<AddFood />} path="addfood" />
+              <Route element={ <UserAuth ><ManageDiet /></UserAuth> } path="managediet" />
              
             </Routes>
           </AnimatePresence>

@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { toast } from 'react-hot-toast';
-import { Link } from 'react-router-dom';
-import AddDiet from './AddDiet'
+import React, { useEffect, useState } from "react";
+import { toast } from "react-hot-toast";
+import { Link } from "react-router-dom";
+import AddDiet from "./AddDiet";
 
 const ManageDiet = () => {
-
   const [foodItems, foodItemsList] = useState([]);
 
   const fetchUserData = async () => {
-    const res = await fetch('http://localhost:5000/user/getall');
+    const res = await fetch("http://localhost:5000/diet/getall");
     console.log(res.status);
 
     const data = await res.json();
@@ -17,59 +16,115 @@ const ManageDiet = () => {
   };
 
   const deleteUser = async (id) => {
-    const res = await fetch('http://localhost:5000/user/delete/' + id, { method: 'DELETE' });
+    const res = await fetch("http://localhost:5000/diet/delete/" + id, {
+      method: "DELETE",
+    });
     console.log(res.status);
     const data = await res.json();
     if (res.status === 200) {
       fetchUserData();
-      toast.success(data.name + ' Deleted Successfully ❗')
+      toast.success(data.name + " Deleted Successfully ❗");
     }
-  }
+  };
 
   useEffect(() => {
     fetchUserData();
   }, []);
   const displayUserData = () => {
-
-    return <table className='table table-dark'>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>title</th>
-          <th>Duration</th>
-          <th colSpan={2}>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          foodItems.map((user) => (<tr>
-            <td>{user._id}</td>
-            <td>{user.name}</td>
-            <td>{user.title}</td>
-            <td>{user.duration}</td>
-            <td>
-              <Link to={'/updateuser/' + user._id} className='btn btn-primary'>Edit</Link>
-            </td>
-            <td>
-              <button onClick={() => { deleteUser(user._id) }} className='btn btn-danger'>Delete</button>
-            </td>
-          </tr>))
-        }
-      </tbody>
-    </table>
-  }
+    return (
+      <table className="table table-dark">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>title</th>
+            <th>Duration</th>
+            <th colSpan={2}>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {foodItems.map((user) => (
+            <tr>
+              <td>{user._id}</td>
+              <td>{user.name}</td>
+              <td>{user.title}</td>
+              <td>{user.duration}</td>
+              <td>
+                <Link
+                  to={"/updateuser/" + user._id}
+                  className="btn btn-primary"
+                >
+                  Edit
+                </Link>
+              </td>
+              <td>
+                <button
+                  onClick={() => {
+                    deleteUser(user._id);
+                  }}
+                  className="btn btn-danger"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    );
+  };
 
   return (
-    <div>
-      <AddDiet />
-      <div className='container'>
-        {displayUserData()}
+    <div style={{
+      backgroundImage: `url("https://lyonsdenfitness.co.uk/wp-content/uploads/2020/03/vegetables-background-000046272610_full1.jpg")`,
+      backgroundSize: 'cover',
+      paddingTop: '120px',
+      minHeight: '120vh'
+    }
+    }
+    className="bg">
+      <>
+        {/* Button trigger modal */}
+        <button
+          type="button"
+          className="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#add-diet-modal"
+        >
+          Add New Diet
+        </button>
+        {/* Modal */}
+        <div
+          className="modal fade modal-lg"
+          id="add-diet-modal"
+          tabIndex={-1}
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5" id="exampleModalLabel">
+                  Add New Diet
+                </h1>
+                <button
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                />
+              </div>
+              <div className="modal-body">
+                <AddDiet />
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
 
-      </div>
-
+      <div className="container">{displayUserData()}</div>
     </div>
-  )
-}
+  );
+};
 
-export default ManageDiet
+export default ManageDiet;

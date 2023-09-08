@@ -1,5 +1,5 @@
 import { useFormik } from 'formik';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { motion } from 'framer-motion';
@@ -10,7 +10,23 @@ const AddDiet = () => {
 
   const [foodItems, setFoodItems] = useState([]);
 
+  const [currentUser, setCurrentUser] = useState(
+    JSON.parse(sessionStorage.getItem("user"))
+  );
 
+  const fetchFoodData = async () => {
+    const res = await fetch("http://localhost:5000/food/getbyuser/"+currentUser._id);
+    console.log(res.status);
+
+    const data = await res.json();
+    console.log(data);
+    setFoodItems(data);
+  };
+
+  useEffect(() => {
+    fetchFoodData();
+  }, [])
+  
 
   const addDiet = useFormik({
     initialValues: {
@@ -53,37 +69,22 @@ const AddDiet = () => {
     },
   });
 
-  const addFoodItem = (e) => {
-    if (!e.target.value) return
-    if (e.code === 'Enter') {
-      setFoodItems([...foodItems, e.target.value])
-      e.target.value = '';
-    }
-  }
-
   return (
     <motion.div
-      style={{
-        backgroundImage: `url("https://lyonsdenfitness.co.uk/wp-content/uploads/2020/03/vegetables-background-000046272610_full1.jpg")`,
-        backgroundSize: 'cover',
-        paddingTop: '120px',
-        minHeight: '120vh'
-      }
-      }
-      className="bg"
+      
       initial={{ opacity: 0, x: '100%' }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: '-100%' }}
       transition={{ duration: 0.3, type: 'spring', stiffness: 50, damping: 10 }}
     >
       <div className='container'>
-        <div className="w-50">
-          <div className="card" style={{ backgroundColor: 'transparent', background: 'none' }}>
+        <div className="col-md-12">
+          <div className="card"  style={{backgroundColor:'transparent',background:'none'}}>
             <div className="card-body">
 
               <form onSubmit={addDiet.handleSubmit}>
 
-                <div className="row mb-3 text-white">
+                <div className="row mb-3">
                   <label htmlFor="name" className="col-sm-2 col-form-label">
                     Enter Name:
                   </label>
@@ -111,20 +112,18 @@ const AddDiet = () => {
                 </div>
                 <div className="row mb-3 text-white text-bold">
                   <label htmlFor="name" className="col-sm-2 col-form-label">
-                    Enter FoodList:
+                    Select FoodList:
                   </label>
                   <div className="col-sm-10 text-white text-bold">
-                    <input type="text" className="form-control" onKeyDown={addFoodItem} />
+                    <select className="form-control">
+                      {foodItems.map((item) => {
+                        return <option>{item.name}</option>
+                      })}
+                      
+                    </select>
                   </div>
 
-                  <h4>Your Food Items</h4>
-                  {
-                    foodItems.map((item, index) => {
-                      return <div>
-                        <p>{index + 1}. {item}</p>
-                      </div>
-                    })
-                  }
+                  
                 </div>
                 <button disabled={addDiet.isSubmitting} type="submit" className="btn btn-primary">
                   Add Diet
