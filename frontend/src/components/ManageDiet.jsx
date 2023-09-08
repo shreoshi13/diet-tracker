@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import AddDiet from "./AddDiet";
+import AddFood from "./AddFood";
 
 const ManageDiet = () => {
   const [foodItems, foodItemsList] = useState([]);
@@ -123,6 +124,56 @@ const ManageDiet = () => {
       </>
 
       <div className="container">{displayUserData()}</div>
+    </div>
+  );
+  return(
+
+    <div style={{
+      backgroundImage: `url("https://lyonsdenfitness.co.uk/wp-content/uploads/2020/03/vegetables-background-000046272610_full1.jpg")`,
+      backgroundSize: 'cover',
+      paddingTop: '120px',
+      minHeight: '120vh'
+    }
+    }
+    className="bg">
+      <>
+        {/* Button trigger modal */}
+        <button
+          type="button"
+          className="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#add-food-modal"
+        >
+          Add New Diet
+        </button>
+        {/* Modal */}
+        <div
+          className="modal fade modal-lg"
+          id="add-food-modal"
+          tabIndex={-1}
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5" id="exampleModalLabel">
+                  Add New Food
+                </h1>
+                <button
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                />
+              </div>
+              <div className="modal-body">
+                <AddFood />
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
     </div>
   );
 };

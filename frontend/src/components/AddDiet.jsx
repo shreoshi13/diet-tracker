@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { motion } from 'framer-motion';
+import AddFood from './AddFood';
 
 
 const AddDiet = () => {
@@ -127,6 +128,9 @@ const AddDiet = () => {
                 </div>
                 <button disabled={addDiet.isSubmitting} type="submit" className="btn btn-primary">
                   Add Diet
+                </button>
+                <button disabled={addFood.isSubmitting} type="submit" className="btn btn-primary">
+                  Add Food
                 </button>
               </form>
 
