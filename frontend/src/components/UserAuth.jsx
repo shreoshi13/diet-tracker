@@ -3,18 +3,18 @@ import { Navigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import Login from './Login';
 
-const UserAuth = ({children}) => {
-  
+const UserAuth = ({ children }) => {
+
     const [currentUser, setCurrentUser] = useState(
         JSON.parse(sessionStorage.getItem('user'))
     )
 
-    if(currentUser !== null){
+    if (currentUser !== null) {
         return children;
-    }else{
+    } else {
         Swal.fire({
-            icon : 'error',
-            title : 'Not Allowed',
+            icon: 'error',
+            title: 'Not Allowed',
             text: 'Login First to access this page'
         });
         return <Navigate to="/Login" />

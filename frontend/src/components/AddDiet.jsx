@@ -78,7 +78,7 @@ const AddDiet = () => {
     >
       <div className='container'>
         <div className="w-50">
-          <div className="card"  style={{backgroundColor:'transparent',background:'none'}}>
+          <div className="card" style={{ backgroundColor: 'transparent', background: 'none' }}>
             <div className="card-body">
 
               <form onSubmit={addDiet.handleSubmit}>

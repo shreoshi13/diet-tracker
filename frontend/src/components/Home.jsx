@@ -29,11 +29,22 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6 my-auto">
+            <h1 className="display-4 fw-bold">Good health starts with what you eat.</h1>
+            <button className="btn btn-primary btn-lg">Get Started</button>
+          </div>
+          <div className="col-md-6">
+            <img className="img-fluid" src="" alt="" />
+          </div>
+        </div>
+      </div>
       <div className="row">
         <div className="col-sm-3 mb-3 mb-sm-0">
           <div className="card text-center border-0">
             <div className="m-3">
-            <img className="p-4 rounded-circle shadow" style={{ objectFit: 'contain' }} src="https://www.myfitnesspal.com/_next/static/media/diary.e6e4c438.svg" alt="" />
+              <img className="p-4 rounded-circle shadow" style={{ objectFit: 'contain' }} src="https://www.myfitnesspal.com/_next/static/media/diary.e6e4c438.svg" alt="" />
             </div>
             <div className="card-body">
               <h5 className="card-title">Learn. Track. Improve.</h5>

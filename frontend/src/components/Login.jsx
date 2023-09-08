@@ -112,7 +112,7 @@ const Login = () => {
                         <div className="text-center pt-1 mb-5 pb-1">
                           <button
                             className="btn btn-primary btn-block fa-lg w-100 mt-5 mb-3"
-                            type="button"
+                            
                           >
                             Submit
                           </button><br></br>
