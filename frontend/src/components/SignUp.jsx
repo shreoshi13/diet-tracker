@@ -75,14 +75,15 @@ const Signup = () => {
 
   return (
     <motion.div
-    style = {{backgroundImage:`url("/newsignup.avif")`,
-    backgroundSize:'cover',
-    paddingTop: '50px',
-    minHeight:'90vh'
-  }
-}
-     
-    className="bg d-flex justify-content-center align-items-center"
+      style={{
+        backgroundImage: `url("https://img.freepik.com/premium-photo/food-background-with-organic-vegetables-healthy-food-diet-concept-website-background_94255-3782.jpg?w=2000")`,
+        backgroundSize: 'cover',
+        paddingTop: '50px',
+        minHeight: '90vh'
+      }
+      }
+
+      className="bg d-flex justify-content-center align-items-center"
       initial={{ opacity: 0, x: "100%" }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: "-100%" }}
@@ -143,7 +144,7 @@ const Signup = () => {
                 value={signupForm.values.age}
               />
 
-              <input type="file" onChange={uploadFile} />
+            
 
               <button
                 disabled={signupForm.isSubmitting}
