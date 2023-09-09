@@ -94,7 +94,7 @@ const AddDiet = () => {
                       value={addDiet.values.name} />
                   </div>
                 </div>
-                <div className="row mb-3 text-white text-bold">
+                <div className="row mb-3 text-bold">
                   <label htmlFor="title" className="col-sm-2 col-form-label">
                     Enter Title:
                   </label>
@@ -103,7 +103,7 @@ const AddDiet = () => {
                       value={addDiet.values.title} />
                   </div>
                 </div>
-                <div className="row mb-3 text-white text-bold">
+                <div className="row mb-3 text-bold">
                   <label htmlFor="duration" className="col-sm-2 col-form-label">
                     Enter Duration:
                   </label>
@@ -111,11 +111,11 @@ const AddDiet = () => {
                     <input type="text" className="form-control" id="Duration" />
                   </div>
                 </div>
-                <div className="row mb-3 text-white text-bold">
+                <div className="row mb-3 text-bold">
                   <label htmlFor="name" className="col-sm-2 col-form-label">
                     Select FoodList:
                   </label>
-                  <div className="col-sm-10 text-white text-bold">
+                  <div className="col-sm-10 text-bold">
                     <select className="form-control">
                       {foodItems.map((item) => {
                         return <option>{item.name}</option>

@@ -94,6 +94,14 @@ const ManageDiet = () => {
         >
           Add New Diet
         </button>
+        <button
+          type="button"
+          className="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#add-food-modal"
+        >
+          Add Food
+        </button>
         {/* Modal */}
         <div
           className="modal fade modal-lg"
@@ -121,32 +129,7 @@ const ManageDiet = () => {
             </div>
           </div>
         </div>
-      </>
 
-      <div className="container">{displayUserData()}</div>
-    </div>
-  );
-  return(
-
-    <div style={{
-      backgroundImage: `url("https://lyonsdenfitness.co.uk/wp-content/uploads/2020/03/vegetables-background-000046272610_full1.jpg")`,
-      backgroundSize: 'cover',
-      paddingTop: '120px',
-      minHeight: '120vh'
-    }
-    }
-    className="bg">
-      <>
-        {/* Button trigger modal */}
-        <button
-          type="button"
-          className="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#add-food-modal"
-        >
-          Add New Diet
-        </button>
-        {/* Modal */}
         <div
           className="modal fade modal-lg"
           id="add-food-modal"
@@ -174,6 +157,8 @@ const ManageDiet = () => {
           </div>
         </div>
       </>
+
+      <div className="container">{displayUserData()}</div>
     </div>
   );
 };
