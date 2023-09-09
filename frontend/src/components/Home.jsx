@@ -158,38 +158,47 @@ const Home = () => {
                 <div className="col-md-9">
                   <div className="card-body">
                     <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Sunt, distinctio!
+                      <div className="col-lg-6 d-flex align-items-center float-right"
+
+                      >
+                        <div className=" px-3 py-4 p-md-5 mx-md-4 text-right">
+                          <h4 className="mb-4">We want to be your buddy and mentor</h4>
+                          <p className="small mb-0">
+                            MyFitnessPal is one of the best weight loss apps and fitness apps, helping nearly 1 million members reach their nutrition and fitness goals every year. Members use it as a calories tracker and calorie counter to log their foods, and take advantage of the app’s food database that contains over 14 million foods. It’s not just a free calorie counter app — it’s also the best calorie counter app for people who are looking to take back control of their health and fitness.
+                          </p>
+                        </div>
+                      </div>
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            Slide 1
+
           </SwiperSlide>
           <SwiperSlide>
-            Slide 2
+
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYknGc6WnbFb-SZN8ldUx1lWErN55AmehBuw&usqp=CAU"
               alt=""
             />
+
           </SwiperSlide>
           <SwiperSlide>
-            Slide 3
+
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWgjCOOazYvYIXWAddif7dGUbDROfE5d5s2A&usqp=CAU"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
-            Slide 4
+
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6sd_l4yv79OHajWOwZcFbdV3jFdwqgltZSA&usqp=CAU"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
-            Slide 5
+
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnJAFHd_Mz_9J8d1JyfW742srit-ZTvUaI9Ns-lKqaTsqNMC1IX35ktyRzsrIg_NFUnpc&usqp=CAU"
               alt=""
