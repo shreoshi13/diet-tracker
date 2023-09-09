@@ -56,10 +56,10 @@ const AddFood = () => {
   return (
     <motion.div
       style={{
-        backgroundImage: `url("https://lyonsdenfitness.co.uk/wp-content/uploads/2020/03/vegetables-background-000046272610_full1.jpg")`,
+        backgroundImage: `url("https://i.pinimg.com/originals/df/fc/a7/dffca74282382587f9b3d221a5c6593c.jpg")`,
         backgroundSize: "cover",
-        paddingTop: "120px",
-        minHeight: "120vh",
+        paddingTop: "50px",
+      minHeight: "90vh",
       }}
       className="bg"
       initial={{ opacity: 0, x: "100%" }}
@@ -68,7 +68,7 @@ const AddFood = () => {
       transition={{ duration: 0.3, type: "spring", stiffness: 50, damping: 10 }}
     >
       <div className="container">
-        <div className="w-50">
+        <div className="w-70">
           <div
             className="card"
             style={{ backgroundColor: "transparent", background: "none" }}
