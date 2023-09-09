@@ -52,28 +52,7 @@ const Signup = () => {
     },
   });
 
-  const uploadFile = async (e) => {
-    if (!e.target.files[0]) return;
-    const file = e.target.files[0];
-    setSelImg(file.name);
-    const fd = new FormData();
-    fd.append("myfile", file);
-
-    const res = await fetch("http://localhost:5000/util/uploadfile", {
-      method: "POST",
-      body: fd,
-    });
-
-    console.log(res.status);
-
-    if (res.status === 200) {
-      console.log("File uploaded successfully");
-    } else {
-      console.log("File upload failed");
-    }
-  };
-
-  return (
+   return (
     <motion.div
       style={{
         backgroundImage: `url("https://img.freepik.com/premium-photo/food-background-with-organic-vegetables-healthy-food-diet-concept-website-background_94255-3782.jpg?w=2000")`,
