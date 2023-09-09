@@ -129,9 +129,9 @@ const AddDiet = () => {
                 <button disabled={addDiet.isSubmitting} type="submit" className="btn btn-primary">
                   Add Diet
                 </button>
-                <button disabled={addFood.isSubmitting} type="submit" className="btn btn-primary">
+                {/* <button disabled={addFood.isSubmitting} type="submit" className="btn btn-primary">
                   Add Food
-                </button>
+                </button> */}
               </form>
 
             </div>
