@@ -142,7 +142,7 @@ const Home = () => {
           }}
           navigation={true}
           modules={[Pagination, Navigation]}
-          // onAutoplayTimeLeft={onAutoplayTimeLeft}
+          //onAutoplayTimeLeft={onAutoplayTimeLeft}
           className="mySwiper"
         >
           <SwiperSlide>
@@ -168,28 +168,92 @@ const Home = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
+          <div className="card py-5">
             <img
+            className="slide-img"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYknGc6WnbFb-SZN8ldUx1lWErN55AmehBuw&usqp=CAU"
               alt=""
             />
+             <div className="card-body text-center">
+                <h4 className="mb-4">We want to be your buddy and mentor</h4>
+                <p className="small mb-0">
+                  MyFitnessPal is one of the best weight loss apps and fitness
+                  apps, helping nearly 1 million members reach their nutrition
+                  and fitness goals every year. Members use it as a calories
+                  tracker and calorie counter to log their foods, and take
+                  advantage of the app’s food database that contains over 14
+                  million foods. It’s not just a free calorie counter app — it’s
+                  also the best calorie counter app for people who are looking
+                  to take back control of their health and fitness.
+                </p>
+              </div>
+              </div>
           </SwiperSlide>
           <SwiperSlide>
+          <div className="card py-5">
             <img
+            className="slide-img"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWgjCOOazYvYIXWAddif7dGUbDROfE5d5s2A&usqp=CAU"
               alt=""
             />
+             <div className="card-body text-center">
+                <h4 className="mb-4">We want to be your buddy and mentor</h4>
+                <p className="small mb-0">
+                  MyFitnessPal is one of the best weight loss apps and fitness
+                  apps, helping nearly 1 million members reach their nutrition
+                  and fitness goals every year. Members use it as a calories
+                  tracker and calorie counter to log their foods, and take
+                  advantage of the app’s food database that contains over 14
+                  million foods. It’s not just a free calorie counter app — it’s
+                  also the best calorie counter app for people who are looking
+                  to take back control of their health and fitness.
+                </p>
+              </div>
+              </div>
           </SwiperSlide>
           <SwiperSlide>
+          <div className="card py-5">
             <img
+            className="slide-img"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6sd_l4yv79OHajWOwZcFbdV3jFdwqgltZSA&usqp=CAU"
               alt=""
             />
+             <div className="card-body text-center">
+                <h4 className="mb-4">We want to be your buddy and mentor</h4>
+                <p className="small mb-0">
+                  MyFitnessPal is one of the best weight loss apps and fitness
+                  apps, helping nearly 1 million members reach their nutrition
+                  and fitness goals every year. Members use it as a calories
+                  tracker and calorie counter to log their foods, and take
+                  advantage of the app’s food database that contains over 14
+                  million foods. It’s not just a free calorie counter app — it’s
+                  also the best calorie counter app for people who are looking
+                  to take back control of their health and fitness.
+                </p>
+              </div>
+              </div>
           </SwiperSlide>
           <SwiperSlide>
+          <div className="card py-5">
             <img
+            className="slide-img"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnJAFHd_Mz_9J8d1JyfW742srit-ZTvUaI9Ns-lKqaTsqNMC1IX35ktyRzsrIg_NFUnpc&usqp=CAU"
               alt=""
             />
+             <div className="card-body text-center">
+                <h4 className="mb-4">We want to be your buddy and mentor</h4>
+                <p className="small mb-0">
+                  MyFitnessPal is one of the best weight loss apps and fitness
+                  apps, helping nearly 1 million members reach their nutrition
+                  and fitness goals every year. Members use it as a calories
+                  tracker and calorie counter to log their foods, and take
+                  advantage of the app’s food database that contains over 14
+                  million foods. It’s not just a free calorie counter app — it’s
+                  also the best calorie counter app for people who are looking
+                  to take back control of their health and fitness.
+                </p>
+              </div>
+              </div>
           </SwiperSlide>
         </Swiper>
       </div>
