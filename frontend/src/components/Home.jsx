@@ -153,7 +153,6 @@ const Home = () => {
                 alt=""
               />
               <div className="card-body text-center">
-                <h4 className="mb-4">We want to be your buddy and mentor</h4>
                 <p className="small mb-0">
                   MyFitnessPal is one of the best weight loss apps and fitness
                   apps, helping nearly 1 million members reach their nutrition
@@ -175,7 +174,6 @@ const Home = () => {
               alt=""
             />
              <div className="card-body text-center">
-                <h4 className="mb-4">We want to be your buddy and mentor</h4>
                 <p className="small mb-0">
                   MyFitnessPal is one of the best weight loss apps and fitness
                   apps, helping nearly 1 million members reach their nutrition
@@ -197,7 +195,6 @@ const Home = () => {
               alt=""
             />
              <div className="card-body text-center">
-                <h4 className="mb-4">We want to be your buddy and mentor</h4>
                 <p className="small mb-0">
                   MyFitnessPal is one of the best weight loss apps and fitness
                   apps, helping nearly 1 million members reach their nutrition
@@ -219,7 +216,6 @@ const Home = () => {
               alt=""
             />
              <div className="card-body text-center">
-                <h4 className="mb-4">We want to be your buddy and mentor</h4>
                 <p className="small mb-0">
                   MyFitnessPal is one of the best weight loss apps and fitness
                   apps, helping nearly 1 million members reach their nutrition
@@ -241,7 +237,7 @@ const Home = () => {
               alt=""
             />
              <div className="card-body text-center">
-                <h4 className="mb-4">We want to be your buddy and mentor</h4>
+                
                 <p className="small mb-0">
                   MyFitnessPal is one of the best weight loss apps and fitness
                   apps, helping nearly 1 million members reach their nutrition
