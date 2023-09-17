@@ -11,6 +11,7 @@ import UserAuth from "./components/UserAuth";
 import Signup from "./components/SignUp";
 import ManageDiet from "./components/ManageDiet";
 import AddFood from "./components/AddFood";
+import ViewDiet from "./components/ViewDiet";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <Route element={<Signup />} path="signup" />
               <Route element={<Login />} path="Login" />
               <Route element={<AddFood />} path="addfood" />
+              <Route element={<ViewDiet />} path="viewdiet/:id" />
               <Route element={ <UserAuth ><ManageDiet /></UserAuth> } path="managediet" />
              
             </Routes>

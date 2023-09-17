@@ -35,7 +35,7 @@ const AddDiet = ({update, setShowAddDeit}) => {
       title: '',
       duration: '',
       foodList: [],
-      user: '',
+      user: currentUser._id,
       createdAt: new Date(),
     },
     onSubmit: async (values, { resetForm, setSubmitting }) => {
@@ -61,6 +61,7 @@ const AddDiet = ({update, setShowAddDeit}) => {
           text: "Diet added successfully 😎",
         });
         setShowAddDeit(false);
+        resetForm();
       } else {
         Swal.fire({
           icon: "error",
@@ -85,16 +86,6 @@ const AddDiet = ({update, setShowAddDeit}) => {
             <div className="card-body">
 
               <form onSubmit={addDiet.handleSubmit}>
-
-                <div className="row mb-3">
-                  <label htmlFor="name" className="col-sm-2 col-form-label">
-                    Enter Name:
-                  </label>
-                  <div className="col-sm-10">
-                    <input type="text" className="form-control" id="user" onChange={addDiet.handleChange}
-                      value={addDiet.values.name} />
-                  </div>
-                </div>
                 <div className="row mb-3 text-bold">
                   <label htmlFor="title" className="col-sm-2 col-form-label">
                     Enter Title:
@@ -109,7 +100,7 @@ const AddDiet = ({update, setShowAddDeit}) => {
                     Enter Duration:
                   </label>
                   <div className="col-sm-10">
-                    <input type="text" className="form-control" id="Duration" />
+                    <input type="text" className="form-control" id="duration" onChange={addDiet.handleChange} value={addDiet.values.duration} />
                   </div>
                 </div>
                 <div className="row mb-3 text-bold">

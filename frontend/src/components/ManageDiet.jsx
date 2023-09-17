@@ -39,8 +39,7 @@ const ManageDiet = () => {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>title</th>
+            <th>Title</th>
             <th>Duration</th>
             <th colSpan={2}>Actions</th>
           </tr>
@@ -49,15 +48,14 @@ const ManageDiet = () => {
           {foodItems.map((user) => (
             <tr>
               <td>{user._id}</td>
-              <td>{user.name}</td>
               <td>{user.title}</td>
               <td>{user.duration}</td>
               <td>
                 <Link
-                  to={"/updateuser/" + user._id}
+                  to={"/viewdiet/" + user._id}
                   className="btn btn-primary"
                 >
-                  Edit
+                  View
                 </Link>
               </td>
               <td>
