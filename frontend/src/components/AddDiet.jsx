@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import AddFood from './AddFood';
 
 
-const AddDiet = () => {
+const AddDiet = ({update, setShowAddDeit}) => {
   const navigate = useNavigate();
 
   const [foodItems, setFoodItems] = useState([]);
@@ -22,11 +22,12 @@ const AddDiet = () => {
     const data = await res.json();
     console.log(data);
     setFoodItems(data);
+    
   };
 
   useEffect(() => {
     fetchFoodData();
-  }, [])
+  }, [update])
   
 
   const addDiet = useFormik({
@@ -59,7 +60,7 @@ const AddDiet = () => {
           title: "GoodJob!",
           text: "Diet added successfully 😎",
         });
-        Navigate("/login");
+        setShowAddDeit(false);
       } else {
         Swal.fire({
           icon: "error",

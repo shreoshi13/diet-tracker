@@ -7,6 +7,8 @@ import AddFood from "./AddFood";
 const ManageDiet = () => {
   const [foodItems, foodItemsList] = useState([]);
 
+  const [showAddDeit, setShowAddDeit] = useState(false);
+
   const fetchUserData = async () => {
     const res = await fetch("http://localhost:5000/diet/getall");
     console.log(res.status);
@@ -33,7 +35,7 @@ const ManageDiet = () => {
   }, []);
   const displayUserData = () => {
     return (
-      <table className="table table-dark">
+      <table className="table table-dark mt-5">
         <thead>
           <tr>
             <th>ID</th>
@@ -76,32 +78,18 @@ const ManageDiet = () => {
   };
 
   return (
-    <div style={{
-      backgroundImage: `url("https://lyonsdenfitness.co.uk/wp-content/uploads/2020/03/vegetables-background-000046272610_full1.jpg")`,
-      backgroundSize: 'cover',
-      paddingTop: '120px',
-      minHeight: '120vh'
-    }
-    }
-    className="bg">
+    <div
+      style={{
+        backgroundImage: `url("https://lyonsdenfitness.co.uk/wp-content/uploads/2020/03/vegetables-background-000046272610_full1.jpg")`,
+        backgroundSize: "cover",
+        paddingTop: "120px",
+        minHeight: "120vh",
+      }}
+      className="bg"
+    >
       <>
         {/* Button trigger modal */}
-        <button
-          type="button"
-          className="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#add-diet-modal"
-        >
-          Add New Diet
-        </button>
-        <button
-          type="button"
-          className="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#add-food-modal"
-        >
-          Add Food
-        </button>
+
         {/* Modal */}
         <div
           className="modal fade modal-lg"
@@ -123,9 +111,7 @@ const ManageDiet = () => {
                   aria-label="Close"
                 />
               </div>
-              <div className="modal-body">
-                <AddDiet />
-              </div>
+              <div className="modal-body">{showAddDeit && <AddDiet update={showAddDeit} setShowAddDeit={setShowAddDeit} />}</div>
             </div>
           </div>
         </div>
@@ -158,7 +144,26 @@ const ManageDiet = () => {
         </div>
       </>
 
-      <div className="container">{displayUserData()}</div>
+      <div className="container">
+        <button
+          type="button"
+          className="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#add-diet-modal"
+          onClick={() => setShowAddDeit(true)}
+        >
+          Add New Diet
+        </button>
+        <button
+          type="button"
+          className="btn btn-primary ms-3"
+          data-bs-toggle="modal"
+          data-bs-target="#add-food-modal"
+        >
+          Add Food
+        </button>
+        {displayUserData()}
+      </div>
     </div>
   );
 };

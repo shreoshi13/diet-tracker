@@ -7,12 +7,9 @@ import { motion } from "framer-motion";
 const AddFood = () => {
   const navigate = useNavigate();
 
-
   const [currentUser, setCurrentUser] = useState(
     JSON.parse(sessionStorage.getItem("user"))
   );
-
-
 
   const foodForm = useFormik({
     initialValues: {
@@ -56,10 +53,9 @@ const AddFood = () => {
   return (
     <motion.div
       style={{
-        backgroundImage: `url("https://i.pinimg.com/originals/df/fc/a7/dffca74282382587f9b3d221a5c6593c.jpg")`,
+        backgroundImage: ` linear-gradient(0deg, #00000087, #00000087), url("https://i.pinimg.com/originals/df/fc/a7/dffca74282382587f9b3d221a5c6593c.jpg")`,
         backgroundSize: "cover",
         paddingTop: "50px",
-      minHeight: "90vh",
       }}
       className="bg"
       initial={{ opacity: 0, x: "100%" }}
