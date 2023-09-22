@@ -115,16 +115,16 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="col-sm-4">
+          <div>
             <div>
-              <div className="card ">
-                <h2>Personal Experiences</h2>
+              
+                <h2 className="text-center text-decoration-underline">Personal Experiences</h2>
                 <p className="text-center">
                   Every day, more than 3,000 members reach their goals with
                   FitnessBuddy. Get inspired for the journey ahead.
                 </p>
               </div>
-            </div>
+            
           </div>
         </div>
       </div>
