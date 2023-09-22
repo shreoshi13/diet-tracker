@@ -7,7 +7,33 @@ const Footer = () => {
         <footer className="py-5">
           <div className="row">
             <div className="col-6 col-md-2 mb-3">
-              <h5>Section</h5>
+              <h5>More Info</h5>
+              <ul className="nav flex-column">
+                <li className="nav-item mb-2">
+                  <a href="#" className="nav-link p-0 text-body-secondary">
+                    Blogs
+                  </a>
+                </li>
+                <li className="nav-item mb-2">
+                  <a href="#" className="nav-link p-0 text-body-secondary">
+                    Diet Plan
+                  </a>
+                </li>
+                <li className="nav-item mb-2">
+                  <a href="#" className="nav-link p-0 text-body-secondary">
+                    Food list
+                  </a>
+                </li>
+                <li className="nav-item mb-2">
+                  <a href="#" className="nav-link p-0 text-body-secondary">
+                    Calorie count
+                  </a>
+                </li>
+              
+              </ul>
+            </div>
+            <div className="col-6 col-md-2 mb-3">
+              <h5>Content</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
                   <a href="#" className="nav-link p-0 text-body-secondary">
@@ -37,63 +63,29 @@ const Footer = () => {
               </ul>
             </div>
             <div className="col-6 col-md-2 mb-3">
-              <h5>Section</h5>
+              <h5>Contact Us</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
                   <a href="#" className="nav-link p-0 text-body-secondary">
-                    Home
+                    Facebook
                   </a>
                 </li>
                 <li className="nav-item mb-2">
                   <a href="#" className="nav-link p-0 text-body-secondary">
-                    Features
+                    Instagram
                   </a>
                 </li>
                 <li className="nav-item mb-2">
                   <a href="#" className="nav-link p-0 text-body-secondary">
-                    Pricing
+                    WhatsApp
                   </a>
                 </li>
                 <li className="nav-item mb-2">
                   <a href="#" className="nav-link p-0 text-body-secondary">
-                    FAQs
+                    YouTube
                   </a>
                 </li>
-                <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-body-secondary">
-                    About
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-6 col-md-2 mb-3">
-              <h5>Section</h5>
-              <ul className="nav flex-column">
-                <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-body-secondary">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-body-secondary">
-                    Features
-                  </a>
-                </li>
-                <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-body-secondary">
-                    Pricing
-                  </a>
-                </li>
-                <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-body-secondary">
-                    FAQs
-                  </a>
-                </li>
-                <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-body-secondary">
-                    About
-                  </a>
-                </li>
+               
               </ul>
             </div>
             <div className="col-md-5 offset-md-1 mb-3">
@@ -118,7 +110,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-            <p>© 2023 Company, Inc. All rights reserved.</p>
+            <p className="text-center">© 2023 Company, Inc. All rights reserved.</p>
             <ul className="list-unstyled d-flex">
               <li className="ms-3">
                 <a className="link-body-emphasis" href="#">
