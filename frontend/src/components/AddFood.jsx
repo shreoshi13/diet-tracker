@@ -37,7 +37,7 @@ const AddFood = () => {
         Swal.fire({
           icon: "success",
           title: "GoodJob!",
-          text: "Diet added successfully 😎",
+          text: "Food Item added successfully 😎",
         });
         Navigate("/login");
       } else {
@@ -119,7 +119,7 @@ const AddFood = () => {
                   type="submit"
                   className="btn btn-primary"
                 >
-                  Add Diet
+                  Add Food
                 </button>
               </form>
             </div>

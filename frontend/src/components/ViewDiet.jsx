@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -21,11 +22,16 @@ const ViewDiet = () => {
   const displayDietDetails = () => {
     if (dietData !== null) {
       return (
-        <div>
-          <h1>{dietData.title}</h1>
-          <h5>{dietData.duration}</h5>
 
-        
+        <div>
+          <h1 className="text-center text-decoration-underline">
+            Details of your diet
+          </h1>
+          <div className="card">
+            <h3 className="text-center"><u>Title of your Diet :</u> {dietData.title}</h3>
+            <h3 className="text-center"><u>Duration of your Diet :</u> {dietData.duration}</h3>
+          </div>
+
 
         </div>
       );
@@ -33,10 +39,13 @@ const ViewDiet = () => {
   };
 
   return <div>
-    <div className="container">
-        {displayDietDetails()}
-    </div>
-  </div>;
+  <div className="container">
+      {displayDietDetails()}
+  </div>
+</div>;
 };
+
+
+
 
 export default ViewDiet;
