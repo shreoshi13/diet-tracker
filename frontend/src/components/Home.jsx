@@ -117,7 +117,7 @@ const Home = () => {
           </div>
           <div className="col-sm-4">
             <div>
-              <div className="card text-center">
+              <div className="card ">
                 <h2>Personal Experiences</h2>
                 <p className="text-center">
                   Every day, more than 3,000 members reach their goals with
